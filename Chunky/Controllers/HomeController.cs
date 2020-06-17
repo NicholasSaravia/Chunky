@@ -12,5 +12,29 @@ namespace Chunky.Controllers
         {
             return View();
         }
+
+        public IActionResult UploadChunks()
+        {
+            try
+            {
+                return Ok();
+            }
+            catch
+            {
+                return StatusCode(500);
+            }
+        }
+
+        public IActionResult SubmitChunks()
+        {
+            try
+            {
+                return Ok();
+            }
+            catch
+            {
+                return StatusCode(500);
+            }
+        }
     }   
 }

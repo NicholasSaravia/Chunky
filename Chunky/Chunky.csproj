@@ -4,4 +4,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="OpenSource\dropzone-5.7.0\.gitignore" />
+    <Content Include="OpenSource\dropzone-5.7.0\.tagconfig" />
+    <Content Include="OpenSource\dropzone-5.7.0\CONTRIBUTING.md" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\basic.css" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\dropzone-amd-module.js" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\dropzone.css" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\dropzone.js" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\dropzone.js.map" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\min\basic.min.css" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\min\dropzone-amd-module.min.js" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\min\dropzone.min.css" />
+    <Content Include="OpenSource\dropzone-5.7.0\dist\min\dropzone.min.js" />
+    <Content Include="OpenSource\dropzone-5.7.0\index.js" />
+    <Content Include="OpenSource\dropzone-5.7.0\LICENSE" />
+    <Content Include="OpenSource\dropzone-5.7.0\README.md" />
+  </ItemGroup>
+
 </Project>
