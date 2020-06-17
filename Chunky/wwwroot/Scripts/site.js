@@ -7,7 +7,8 @@ $(function () {
 });
 
 function upload() {
-    dropZone.autoProcessQueue = true;
+    console.log("process");
+    dropZone.processQueue();
 }
 
 function instantiateDropZone() {
@@ -51,12 +52,12 @@ function instantiateDropZone() {
             }
         },
         ignoreHiddenFiles: true,
-        url: "/Home/UploadChunks/",
+        url: "Home/UploadChunks",
         maxFileSize: 40000000000,       // max individual file size 2gig
         chunking: true,                 // enable chunking
         forceChunking: true,            // forces chunking when file.size < chunkSize
         capture: null,
-        parallelChunkUploads: true,     //  allows chunks to be uploaded in parallel - true
+        parallelChunkUploads: false,     //  allows chunks to be uploaded in parallel - true
         autoProcessQueue: false,
         chunkSize: 1000000,             // chunk size 1,000,000 bytes (~1MB)
         retryChunks: true,              // retry chunks on failure
