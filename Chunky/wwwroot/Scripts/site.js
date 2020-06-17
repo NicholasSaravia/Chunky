@@ -78,6 +78,8 @@ function instantiateDropZone() {
                     success: function (data) {
 
                         if (data.success) {
+
+                            $("#finished-files").append(`<li>${data.message}</li>`);
                             done();
                         }
                         else {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Chunky.Controllers
@@ -16,7 +17,17 @@ namespace Chunky.Controllers
 
         public IActionResult Index()
         {
+            ClearUploadDirectory();
             return View();
+        }
+
+        private void ClearUploadDirectory()
+        {
+            var dir = $@"upload";
+            if (Directory.Exists(dir))
+            {
+                Directory.Delete(dir, true);
+            }
         }
 
         [HttpPost]
@@ -48,11 +59,14 @@ namespace Chunky.Controllers
             }
         }
 
-        public IActionResult SubmitChunks()
+        public IActionResult SubmitChunks(string fileName, string uuid)
         {
             try
             {
-                return Ok();
+                // do whatever with the file. 
+                // send to blob storage and crap.
+                // you should clear here not on reload of index.
+                return Ok(new {success = true, message = $"{fileName} finished!"});
             }
             catch
             {
